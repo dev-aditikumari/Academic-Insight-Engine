@@ -1,0 +1,27 @@
+[project]
+name = "academic-insight"
+version = "0.1.0"
+description = "Analysis of student performance data, demonstrated on a synthetic dataset"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "seaborn>=0.13",
+    "openpyxl>=3.1",
+]
+
+[tool.setuptools]
+packages = ["academic_insight"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["legacy"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
